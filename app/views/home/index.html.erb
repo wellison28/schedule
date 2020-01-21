@@ -1,0 +1,13 @@
+<main>
+  <div>
+    <h1>Reserva da Sala</h1>
+    <div>
+      Usuario: <strong><%= current_user.name %></strong>
+    </div>
+    <div>
+      <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+    </div>
+  </div>
+</main>
+
+
