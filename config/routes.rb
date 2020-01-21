@@ -6,5 +6,7 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
 
+  post "/reservations", to: "reservations#create"
+
   root "home#index"
 end
