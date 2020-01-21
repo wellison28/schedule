@@ -8,6 +8,32 @@
       <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
     </div>
   </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Horário</th>
+        <th scope="col">Segunda</th>
+        <th scope="col">Terca</th>
+        <th scope="col">Quarta</th>
+        <th scope="col">Quinta</th>
+        <th scope="col">Sexta</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% (6..23).each do |hour| %>
+        <tr>
+          <th scope="row"><%= "#{hour}:00" %></th>
+          <% (0..4).each do |day| %>
+            <td>
+              <a href="" data-hour=<%= hour %> data-day=<%= day %>>
+                Disponivel
+              </a>
+            </td>
+          <% end %>
+        </tr>
+      <% end  %>
+    </tbody>
+  </table>
 </main>
 
 
